@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowRight, Heart, Sparkles, Award, ShieldCheck, CheckCircle2 } from 'lucide-react';
 import { FounderImage } from './FounderImage';
+import heroImage from '../NANA HALIMA EMPOWERMENT INITIATIVE/1000033740.jpg';
 
 interface HeroProps {
   onOpenApply: () => void;
@@ -18,10 +19,14 @@ export const Hero: React.FC<HeroProps> = ({ onOpenApply, onOpenDonate }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         {/* Left Column Text & CTAs */}
         <div className="lg:col-span-7 flex flex-col items-start pt-6 lg:pt-0">
-          {/* Eyebrow */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-950/80 border border-emerald-500/40 text-emerald-400 text-xs font-montserrat font-bold tracking-wider uppercase mb-6 shadow-sm">
-            <Sparkles className="w-3.5 h-3.5 text-[#FFD700]" />
-            NANA HALIMA EMPOWERMENT INITIATIVE
+          {/* Small circular hero/profile image next to the eyebrow/title */}
+          <div className="flex items-center gap-6 mb-4">
+            <img src={heroImage} alt="Dr. Halima Sulaiman Zakari" className="hero-image hidden md:block" />
+            {/* Eyebrow */}
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-950/80 border border-emerald-500/40 text-emerald-400 text-xs font-montserrat font-bold tracking-wider">
+              <Sparkles className="w-3.5 h-3.5 text-[#FFD700]" />
+              NANA HALIMA EMPOWERMENT INITIATIVE
+            </div>
           </div>
 
           {/* Main Heading */}
@@ -67,20 +72,20 @@ export const Hero: React.FC<HeroProps> = ({ onOpenApply, onOpenDonate }) => {
           <div className="flex flex-wrap items-center gap-4 w-full sm:w-auto">
             <a
               href="#programs"
-              className="px-6 py-3.5 rounded-xl font-poppins font-bold text-sm bg-[#008751] hover:bg-[#00683e] text-white transition-all shadow-lg shadow-emerald-950/50 flex items-center justify-center gap-2 border border-[#FFD700]/30 hover:translate-y-[-2px]"
+              className="px-6 py-3.5 rounded-xl font-poppins font-bold text-sm bg-[#008751] hover:bg-[#00683e] text-white transition-all shadow-lg shadow-emerald-950/50 flex items-center justify-center gap-2"
             >
               Our Programs
               <ArrowRight className="w-4 h-4" />
             </a>
             <button
               onClick={onOpenApply}
-              className="px-6 py-3.5 rounded-xl font-poppins font-semibold text-sm bg-slate-900 hover:bg-slate-800 text-white border border-slate-700 transition-all flex items-center justify-center gap-2 hover:border-emerald-500/50"
+              className="px-6 py-3.5 rounded-xl font-poppins font-semibold text-sm bg-slate-900 hover:bg-slate-800 text-white border border-slate-700 transition-all flex items-center justify-center gap-2"
             >
               Apply Now
             </button>
             <button
               onClick={onOpenDonate}
-              className="px-6 py-3.5 rounded-xl font-poppins font-bold text-sm bg-gradient-to-r from-[#FFD700] to-amber-400 hover:from-amber-400 hover:to-amber-500 text-slate-950 transition-all shadow-md flex items-center justify-center gap-2 hover:translate-y-[-2px]"
+              className="px-6 py-3.5 rounded-xl font-poppins font-bold text-sm bg-gradient-to-r from-[#FFD700] to-amber-400 hover:from-amber-400 hover:to-amber-500 text-slate-950 transition-all shadow-lg"
             >
               <Heart className="w-4 h-4 fill-slate-950 text-slate-950" />
               Donate
@@ -99,7 +104,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenApply, onOpenDonate }) => {
             />
 
             {/* Floating Tag */}
-            <div className="absolute top-4 left-4 bg-slate-950/80 backdrop-blur-md px-3 py-1.5 rounded-full border border-emerald-500/40 text-[11px] font-montserrat font-bold text-emerald-400 flex items-center gap-1.5 z-20">
+            <div className="absolute top-4 left-4 bg-slate-950/80 backdrop-blur-md px-3 py-1.5 rounded-full border border-emerald-500/40 text-[11px] font-montserrat font-bold text-emerald-400 flex items-center gap-2">
               <Award className="w-3.5 h-3.5 text-[#FFD700]" />
               Jigawa Central Philanthropist
             </div>

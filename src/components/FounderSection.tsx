@@ -2,6 +2,8 @@ import React from 'react';
 import { FOUNDER_INFO } from '../data/foundationData';
 import { FounderImage } from './FounderImage';
 import { Quote, Heart, Award, ShieldCheck } from 'lucide-react';
+import founderImage from '../NANA HALIMA EMPOWERMENT INITIATIVE/1000033742.jpg';
+import youthImage from '../NANA HALIMA EMPOWERMENT INITIATIVE/1000033743.jpg';
 
 export const FounderSection: React.FC = () => {
   return (
@@ -64,7 +66,8 @@ export const FounderSection: React.FC = () => {
                 <p className="font-montserrat font-bold text-lg text-slate-900">Education Advocate</p>
                 <p className="font-poppins text-xs text-slate-600 mt-0.5">Teacher Upskilling</p>
               </div>
-              <div className="bg-white p-4 rounded-xl border border-slate-200/80 shadow-sm text-center col-span-2 sm:col-span-1">
+              <div className="bg-white p-4 rounded-xl border border-slate-200/80 shadow-sm text-center flex flex-col items-center">
+                <img src={youthImage} alt="Youth Mentor Sports & Digital" className="youth-image mb-3" referrerPolicy="no-referrer" />
                 <p className="font-montserrat font-bold text-lg text-slate-900">Youth Mentor</p>
                 <p className="font-poppins text-xs text-slate-600 mt-0.5">Sports & Digital</p>
               </div>
@@ -74,10 +77,11 @@ export const FounderSection: React.FC = () => {
           {/* Right Column Photo 4 */}
           <div className="lg:col-span-5 relative">
             <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white group aspect-[4/5]">
-              <FounderImage
-                photoKey="closing"
-                alt="Her Excellency Dr. Amb. Halima Sulaiman Zakari - Pure White Attire"
-                containerClassName="w-full h-full"
+              <img
+                src={founderImage}
+                alt="Her Excellency Dr. Amb. Halima Sulaiman Zakari - Founder"
+                referrerPolicy="no-referrer"
+                className="w-full h-full object-cover"
               />
               <div className="absolute bottom-4 inset-x-4 bg-slate-950/80 backdrop-blur-md text-white p-4 rounded-2xl border border-emerald-500/30">
                 <p className="font-montserrat font-bold text-sm text-emerald-400">

@@ -14,3 +14,59 @@
   --primary-dark: #00683e;
   --gold: #FFD700;
 }
+
+/* Hero Image */
+.hero-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #C9A84C;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Founder Image */
+.founder-image {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+}
+
+/* Youth Image */
+.youth-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+/* Initiatives Banner */
+.initiatives-banner {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .hero-image {
+    width: 100px;
+    height: 100px;
+  }
+  .founder-image {
+    max-width: 100%;
+  }
+  .youth-image {
+    width: 150px;
+    height: 150px;
+  }
+  .initiatives-banner {
+    height: 200px;
+  }
+}

@@ -1,72 +1,36 @@
-@import "tailwindcss";
-
-@layer utilities {
-  .font-montserrat {
-    font-family: 'Montserrat', sans-serif;
-  }
-  .font-poppins {
-    font-family: 'Poppins', sans-serif;
-  }
+/* Popup: force compact, left-side position, and visible close button */
+[role="dialog"][aria-label="Application notification"] {
+  position: fixed !important;
+  left: 1rem !important; /* move to left side */
+  bottom: 1rem !important;
+  max-width: 18rem !important;
+  width: calc(100% - 2rem) !important;
+  padding: 0.5rem !important;
+  box-sizing: border-box !important;
+  border-radius: 12px !important;
+  border: 2px solid rgba(0,135,81,0.85) !important;
+  background: #0f1724 !important;
+  color: #fff !important;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5) !important;
+  z-index: 2147483646 !important; /* very high but keep below browser chrome */
+  padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 12px) !important;
 }
 
-:root {
-  --primary: #008751;
-  --primary-dark: #00683e;
-  --gold: #FFD700;
+/* Place close button outside and ensure it sits above everything */
+[role="dialog"][aria-label="Application notification"] > button[aria-label="Close notification"] {
+  position: absolute !important;
+  right: -12px !important;
+  top: -12px !important;
+  z-index: 2147483647 !important; /* highest possible */
+  background: #0b1220 !important;
+  border-radius: 50% !important;
+  padding: 6px !important;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.5) !important;
+  border: 1px solid rgba(255,255,255,0.06) !important;
 }
 
-/* Hero Image */
-.hero-image {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 4px solid #C9A84C;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-}
-
-/* Founder Image */
-.founder-image {
-  width: 100%;
-  max-width: 350px;
-  height: auto;
-  border-radius: 12px;
-  object-fit: cover;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.3);
-}
-
-/* Youth Image */
-.youth-image {
-  width: 200px;
-  height: 200px;
-  border-radius: 16px;
-  object-fit: cover;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-}
-
-/* Initiatives Banner */
-.initiatives-banner {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 8px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-}
-
-/* Mobile Responsive */
-@media (max-width: 768px) {
-  .hero-image {
-    width: 100px;
-    height: 100px;
-  }
-  .founder-image {
-    max-width: 100%;
-  }
-  .youth-image {
-    width: 150px;
-    height: 150px;
-  }
-  .initiatives-banner {
-    height: 200px;
-  }
+/* Compact button sizing inside the popup */
+[role="dialog"][aria-label="Application notification"] button:not([aria-label]) {
+  font-size: 13px !important;
+  padding: 8px 10px !important;
 }

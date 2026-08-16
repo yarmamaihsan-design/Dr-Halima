@@ -1,12 +1,18 @@
 import { ProgramItem, ImpactStat, MediaItem, VideoItem, NewsItem, DonationOption } from '../types';
 
+// Import founder images so bundler resolves asset URLs
+import heroImg from '../NANA HALIMA EMPOWERMENT INITIATIVE/1000033744.jpg';
+import aboutImg from '../NANA HALIMA EMPOWERMENT INITIATIVE/1000033743.jpg';
+import impactImg from '../NANA HALIMA EMPOWERMENT INITIATIVE/1000033740.jpg';
+import closingImg from '../NANA HALIMA EMPOWERMENT INITIATIVE/1000033742.jpg';
+
 export const FOUNDER_INFO = {
   name: "Her Excellency Dr. Ambassador Halima Sulaiman Zakari",
   title: "Jigawa Central Philanthropist",
   organization: "Nana Halima Empowerment Initiative",
   shortName: "Dr. Amb. Halima S. Zakari",
   quote: "My passion is to see every child in Jigawa go to school, every youth gain a skill, and every family live with dignity.",
-  bio: "Dr. Halima is a renowned Philanthropist, Humanitarian and Advocate for Youth Development in Jigawa Central. Through the Nana Halima Empowerment Initiative, she has dedicated her life to supporting vulnerable groups, promoting education, and creating sustainable livelihoods.",
+  bio: "Dr. Halima is a renowned Philanthropist, Humanitarian and Advocate for Youth Development in Jigawa Central. Through the Nana Halima Empowerment Initiative, she has dedicated her life to supporting education, youth skills and women economic empowerment.",
   phone: "09032356601",
   email: "nanahalimaempowerorg@gmail.com",
   location: "Dutse, Jigawa State, Nigeria",
@@ -17,13 +23,13 @@ export const FOUNDER_INFO = {
 // 4 Official Images of Her Excellency Dr. Halima Sulaiman Zakari
 export const FOUNDER_IMAGES = {
   // Image 1 - Hero
-  hero: "/1000033744.jpg", 
+  hero: heroImg,
   // Image 2 - About
-  about: "/1000033743.jpg",
+  about: aboutImg,
   // Image 3 - Impact Story
-  impact: "/1000033740.jpg",
+  impact: impactImg,
   // Image 4 - Closing / Founder Quote
-  closing: "/1000033742.jpg"
+  closing: closingImg
 };
 
 export const IMPACT_STATS: ImpactStat[] = [
@@ -198,7 +204,7 @@ export const NEWS_EVENTS_DATA: NewsItem[] = [
     status: "APPLICATIONS OPEN",
     category: "Upcoming Program",
     summary: "The second cohort of the flagship digital literacy initiative is now enrolling teachers across Jigawa schools.",
-    fullContent: "The Nana Halima Empowerment Initiative announces the opening of applications for the LGA 2 Teachers Digital Skills Program. The intensive 5-day workshop covers Microsoft Office, internet research, and AI-powered educational aids.",
+    fullContent: "The Nana Halima Empowerment Initiative announces the opening of applications for the LGA 2 Teachers Digital Skills Program. The intensive 5-day workshop covers Microsoft Office, modern pedagogical AI tools and practical classroom activities.",
     imageUrl: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=800",
     isFeatured: true
   },
@@ -226,28 +232,4 @@ export const NEWS_EVENTS_DATA: NewsItem[] = [
     imageUrl: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800",
     isFeatured: false
   }
-];
-
-export const JIGAWA_LGAS = [
-  "Birnin Kudu",
-  "Dutse",
-  "Buji",
-  "Gwaram",
-  "Kiyawa",
-  "Jahun",
-  "Miga",
-  "Ringim",
-  "Taura",
-  "Hadejia",
-  "Kafin Hausa",
-  "Kaugama",
-  "Mallam Madori",
-  "Gumel"
-];
-
-export const DONATION_AMOUNTS: DonationOption[] = [
-  { amount: 5000, label: "₦5,000", impactNote: "Provides educational exercise books & stationery kits for 5 students." },
-  { amount: 10000, label: "₦10,000", impactNote: "Funds digital training materials & software licenses for 1 teacher." },
-  { amount: 25000, label: "₦25,000", impactNote: "Sponsors a youth athlete with track kit & sports equipment." },
-  { amount: 50000, label: "₦50,000", impactNote: "Provides a women micro-enterprise startup grant & vocational tools." }
 ];

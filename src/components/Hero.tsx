@@ -21,7 +21,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenApply, onOpenDonate }) => {
         <div className="lg:col-span-7 flex flex-col items-start pt-6 lg:pt-0">
           {/* Small circular hero/profile image next to the eyebrow/title */}
           <div className="flex items-center gap-6 mb-4">
-            <img src={heroImage} alt="Dr. Halima Sulaiman Zakari" className="hero-image hidden md:block" />
+            <img src={heroImage} alt="Dr. Halima Sulaiman Zakari" className="hero-image" />
             {/* Eyebrow */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-950/80 border border-emerald-500/40 text-emerald-400 text-xs font-montserrat font-bold tracking-wider">
               <Sparkles className="w-3.5 h-3.5 text-[#FFD700]" />

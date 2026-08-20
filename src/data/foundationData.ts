@@ -6,6 +6,13 @@ import aboutImg from '../NANA HALIMA EMPOWERMENT INITIATIVE/1000033743.jpg';
 import impactImg from '../NANA HALIMA EMPOWERMENT INITIATIVE/1000033740.jpg';
 import closingImg from '../NANA HALIMA EMPOWERMENT INITIATIVE/1000033742.jpg';
 
+// Import real Media Gallery images
+import centeredHalimaImg from '../NANA HALIMA EMPOWERMENT INITIATIVE/centerd_halima.jpg';
+import abujaDinnerImg from '../NANA HALIMA EMPOWERMENT INITIATIVE/abuja_dinner.jpg';
+import ramadanSupportImg from '../NANA HALIMA EMPOWERMENT INITIATIVE/Ramadan_support.jpg';
+import empowermentImg from '../NANA HALIMA EMPOWERMENT INITIATIVE/150_empowerment.jpg';
+import vvfDonationImg from '../NANA HALIMA EMPOWERMENT INITIATIVE/VVF_donation.jpg';
+
 export const FOUNDER_INFO = {
   name: "Her Excellency Dr. Ambassador Halima Sulaiman Zakari",
   title: "Jigawa Central Philanthropist",
@@ -24,10 +31,13 @@ export const FOUNDER_INFO = {
 export const FOUNDER_IMAGES = {
   // Image 1 - Hero
   hero: heroImg,
+
   // Image 2 - About
   about: aboutImg,
+
   // Image 3 - Impact Story
   impact: impactImg,
+
   // Image 4 - Closing / Founder Quote
   closing: closingImg
 };
@@ -117,12 +127,27 @@ export const PROGRAMS_DATA: ProgramItem[] = [
   }
 ];
 
+/**
+ * Media Gallery
+ *
+ * Exact image mapping requested:
+ *
+ * 1. Teacher Training -> centerd_halima.jpg
+ * 2. Athletics       -> abuja_dinner.jpg
+ * 3. Community       -> Ramadan_support.jpg
+ * 4. Empowerment     -> 150_empowerment.jpg
+ * 5. Donations       -> VVF_donation.jpg
+ * 6. Community       -> abuja_dinner.jpg
+ *
+ * The same abuja_dinner.jpg is intentionally used for
+ * both the Athletics and second Community gallery cards.
+ */
 export const MEDIA_GALLERY_DATA: MediaItem[] = [
   {
     id: "media-1",
     title: "Dr. Halima Addressing Jigawa Educator Forum",
     category: "Teacher Training",
-    imageUrl: FOUNDER_IMAGES.hero,
+    imageUrl: centeredHalimaImg,
     caption: "Her Excellency Dr. Amb. Halima S. Zakari at the opening ceremony of the Teachers Digital Skills Workshop.",
     date: "2026"
   },
@@ -130,7 +155,7 @@ export const MEDIA_GALLERY_DATA: MediaItem[] = [
     id: "media-2",
     title: "Grassroots Track & Field Athletics Meet",
     category: "Athletics",
-    imageUrl: "https://images.unsplash.com/photo-1517649763962-0c623266010b?auto=format&fit=crop&q=80&w=800",
+    imageUrl: abujaDinnerImg,
     caption: "Young athletes competing in 100m sprint trials during the LGA preliminary sports selection.",
     date: "2026"
   },
@@ -138,7 +163,7 @@ export const MEDIA_GALLERY_DATA: MediaItem[] = [
     id: "media-3",
     title: "Dr. Halima Engagement with Community Elders",
     category: "Community",
-    imageUrl: FOUNDER_IMAGES.about,
+    imageUrl: ramadanSupportImg,
     caption: "Consultations with local leaders and stakeholders in Birnin Kudu.",
     date: "2026"
   },
@@ -146,7 +171,7 @@ export const MEDIA_GALLERY_DATA: MediaItem[] = [
     id: "media-4",
     title: "Distribution of Micro-Enterprise Toolkits",
     category: "Empowerment",
-    imageUrl: "https://images.unsplash.com/photo-1532629345422-7515f3d16bb9?auto=format&fit=crop&q=80&w=800",
+    imageUrl: empowermentImg,
     caption: "Women beneficiaries receiving tailoring machines and starter packs.",
     date: "2026"
   },
@@ -154,7 +179,7 @@ export const MEDIA_GALLERY_DATA: MediaItem[] = [
     id: "media-5",
     title: "Dr. Halima Humanitarian Aid Event",
     category: "Donations",
-    imageUrl: FOUNDER_IMAGES.impact,
+    imageUrl: vvfDonationImg,
     caption: "Direct presentation of relief items to families and widows.",
     date: "2026"
   },
@@ -162,7 +187,7 @@ export const MEDIA_GALLERY_DATA: MediaItem[] = [
     id: "media-6",
     title: "Official Foundation Address by Dr. Halima",
     category: "Community",
-    imageUrl: FOUNDER_IMAGES.closing,
+    imageUrl: abujaDinnerImg,
     caption: "Advocating for female education and youth self-reliance in Jigawa Central.",
     date: "2026"
   }
